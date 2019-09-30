@@ -1,0 +1,830 @@
+
+
+
+
+
+<html>
+<head>
+
+<title></title>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,600' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+
+    <!--- THIS IS THE SCRIPT FOR A FANCY HOVER -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="http://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+    <script>
+    (function($){
+    $(document).ready(function(){
+    $("a[title]").style_my_tooltips({
+    tip_follows_cursor:true,
+    tip_delay_time:90,
+    tip_fade_speed:600,
+    attribute:"title"
+    });
+    });
+    })(jQuery);
+</script>
+
+<style>
+
+/* initial design @desmund, @bates, @minna: instructions, cleanup and extras added by @leah; instagram scroll taken from @tentacool */
+
+@font-face{font-family: instastory; src:url("https://dl.dropbox.com/s/p390okthfpau2od/SF-UI-Text-Medium.ttf");}
+@font-face{font-family: instawords; src:url("https://dl.dropbox.com/s/ek441voxv6iacgm/proximanovalight.ttf");}
+
+body {
+  padding-top: 50px;
+  background-color: #fefefe;
+}
+
+/* "homepage" - change background colour, fonts, etc here. */
+#container {
+  margin: 0 auto; 
+  width: 700px;  
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #fefefe;
+}
+
+#headline {
+  font-family: 'karla', helvetica, sans-serif; 
+  font-weight: 700; 
+  font-size: 28px; 
+  line-height: 90px; 
+  text-transform: lowercase; 
+  color:#222; 
+  text-align:center;
+}
+ 
+#navigation {
+  width:700px; 
+  margin: 0 auto; 
+  position: relative;
+}
+
+.date {
+  color: #333; 
+  display: block; 
+  font-family: 'karla', helvetica, serif; 
+  font-size: 13px; 
+  font-weight: 400; 
+  letter-spacing: 0.4px; 
+  line-height: 110%; 
+  text-align:center; 
+  text-transform:lowercase;
+  padding:0;
+}
+
+.type {
+  font-family: 'karla', helvetica, serif; 
+  font-size: 10px; 
+  line-height:100%; 
+  font-weight: 100; 
+  letter-spacing: 0.4px; 
+  text-transform: lowercase; 
+  padding-bottom:5px; 
+  padding-top:2.5px;
+  text-align:center; 
+  margin:0;
+  color:#676767; 
+}
+
+.block {
+  max-width:100px; 
+  display:inline-block; 
+  width: 75px; 
+  position:relative; 
+  text-align:center;
+}
+
+.object {
+  margin:0 auto;
+}
+
+.icon {
+  height: 34px;
+}
+
+/* title on each popup, change font size or font here */
+.subhead {
+  font-family: quicksand, sans-serif; 
+  font-size: 25px; 
+  line-height: 100%; 
+  letter-spacing: 1px; 
+  text-transform: uppercase; 
+  display:block; 
+  color:#444;
+}
+
+/* popup - no altering needed. */
+#fade {
+  display: none; 
+  background: #000; 
+  position: fixed; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  opacity: .5; 
+  z-index: 9999;
+} 
+
+.popup_block {
+  display: none; 
+  background: #FFFFFF; 
+  padding: 20px; 
+  float: left;  
+  position: absolute; 
+  top: 50%; 
+  left: 50%;  
+  z-index: 99999; 
+  opacity: 1; 
+  max-height:430px; 
+  overflow:auto; 
+  text-align:justify; 
+  font-family: helvetica neue, roboto condensed, helvetica, arial; 
+  font-size:13px; 
+  line-height:15px; 
+  letter-spacing:0px;
+  text-transform:none;
+}
+
+/* makes the neat looking hover box, do not alter */
+#s-m-t-tooltip {max-width:200px; width:auto; padding:3px 5px; margin:5px 0px 0px 10px; background-color: rgba(239, 239, 239,0.9); font-family: karla, helvetica, arial; font-size:7px; letter-spacing:+1px; text-transform:uppercase; text-align: justify; color:#222; z-index:999999999999999999; -moz-box-shadow: 1px 2px 1px rgba(0,0,0,.1); -webkit-box-shadow: 1px 2px 1px rgba(0,0,0,.1);}
+
+/* gmail hr, do not alter */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/* tumblr */
+.tumblr {background-color:#fff; color: #4c4c4; font-size: 13.5px; line-height: 18px; text-align:left; width:520px; padding:20px; border-radius:5px; }
+.tumblrask {background-color: #efefef; width:435px; padding: 20px;}
+.tumblraskname {font-weight: bold; color: #a6a6a6;}
+.reblog {color:#4c4c4c;font-weight:bold;font-size:13.5px;}
+.tumblrtags {color:#aaa; padding-left:4px;margin:2px;}
+.tumblruser2 {color:#4c4c4c;font-weight: bold; position:absolute;margin-top:15px;}
+.title {font-family: montserrat, helvetica, helvetica neue, sans-serif; font-size: 25px; line-height: 100%; letter-spacing: 0px; color:#444;}
+
+/* updated email; gmail // 07/07/18 @leah */
+.emailhead {padding-left: 0px; padding-top: 0px; padding-bottom:5px; font-size: 16px; text-transform:none; line-height: 16px; float: left; width: 100%;}
+.emaildate {float: right; color: #000; padding-top: 0px; font-size: 12px; font-weight:400;}
+.dateline{line-height:35px; padding-right:5px; float:left;}
+.emailsender {float:left; padding-top:0px; font-size:10px; height:32px; padding-bottom:5px;}
+.sender{padding-left:5px; float:right;}
+.from {font-size:13px; line-height:120%; font-weight: normal; color:#000;}
+.to {font-size:13px; line-height:120%; font-weight:normal; color: #999;}
+
+/* text */
+.sentence {position:relative;}
+.talking {border-radius: 13px; margin: 10px 10px 3px; padding: 8px; position: relative; }
+.talking.to {background-color: #1188fe; color: #FFF; margin-left: 270px; z-index:10; box-shadow: 0 1px 2px rgba(1,1,1,0.2);}
+.talking.from {background-color: #F7F7F7; color: #000; margin-right: 270px; z-index:10; box-shadow: 0 1px 2px rgba(1,1,1,0.2);}
+.talking.to + .talking.to, .talking.from + .talking.from {margin-top: 15px;}
+.talker {font-family:source code pro; font-size:8px; line-height:9px; color: #999; text-transform:uppercase; display:block; position:relative; margin-left:15px;}
+.talker.self {text-align:right; margin-right:15px; margin-left:0px;}
+.textheader {font-family: helvetica, arial, sans serif; font-size:12px; text-align:center; text-transform: none;}
+.img-circle {border-radius: 50%;}
+
+/* instagram -- mashed together from desmund and minna */
+.igdesc {font-family: 'Roboto', helvetica neue, helvetica; font-size: 12px; font-weight: 400;}
+.mainimage{height: 40px; width: 40px; border-radius: 50px;}
+.handle {position: relative; font-family: 'Roboto', helvetica neue, helvetica; top:10px; left: 5px;font-size: 13px; font-weight: bold; text-decoration:none; color: #262626;}
+#comments{position: absolute; overflow: auto; height: 153px; top: 100px; width: 280px; font-family: 'Roboto', helvetica neue, helvetica; font-size: 12px; font-weight: 400;}
+
+/* ig story -- tweaked by lj@ij.com og coding:leah@ij.com */
+.storyicon {
+  border-radius: 100%;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.storyhandle {
+  font-weight:lighter;
+  position: absolute;
+  color: #fff;
+  font-family: instastory;
+  font-size: 10px;
+  margin-top: 20px;
+  margin-left: 35px;
+}
+
+.storylink {
+  font-weight:lighter;
+  position: absolute;
+  color: #fff;
+  font-family: instawords;
+  font-weight:100;
+  font-size: 15px;
+  line-height:15px;
+  letter-spacing:1px;
+  margin-top: 20px;
+  margin-left: 35px;
+}
+
+.storywords {
+  font-weight:lighter;
+  position: absolute;
+  color: #fff;
+  font-family: helvetica, instastory;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-left: 35px;
+}
+
+.storyhour {
+  position: absolute;
+  color: #fff;
+  font-family: instastory;
+  font-weight:lighter;
+  font-size: 10px;
+  margin-top: 20px;
+  margin-left: 115px;
+}
+
+.storyexit {
+  position: absolute;
+  font-size: 10px;
+  margin-top: 20px;
+  margin-left: 175px;
+}
+
+.storyduration {
+  position: absolute;
+  color: #fff;
+  font-family: instastory, arial, roboto;
+  font-size: 10px;
+  margin-top: 5px;
+  margin-left:-5px;
+}
+
+.storybottom {
+  position: absolute;
+  margin-top: 325px;
+  margin-left:;
+}
+
+/* twitter */
+.tweet {border: 1px solid #dddddd; font-family: helvetica; font-size: 15px; line-height: 20px; width: 500px;}
+.tweet a:link, .tweet a:active, .tweet a:visited {color: #2b7bb9; text-decoration: none;}
+.tweet a:hover {color: #3b97e0; text-decoration: none;}
+.verified {position: relative; top: 3px;}
+.tname{font-size: 14px; font-weight: bold; color: #14171a;} .tname:hover{color: #14171a;} .thandle{color: #657786;} .thandle:hover{color: #657786;} .tweet{position: relative; display: block; margin-left: 20; padding-right: 5;}
+
+/* ---- music, from @tentacool phone post ---- */
+.musicheader {
+  margin: 0;
+  height: 55;
+  width: 248px;
+  padding:3px;
+  background-color: #181818;
+  color:#fff;
+  font-family: arial, roboto;
+  font-size:12px;
+  font-weight:bold;
+  text-align:center;
+  text-transform: none;  
+}
+.musiccontent {
+  width: 254;
+  height: 300px;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  background-color: #181818;
+  font-family: helvetica, arial, sans serif;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: none;
+  text-align: left;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+}
+a {color: #fff; text-decoration: none;
+}
+  
+.musictitle {
+  padding-left:5;
+  background-color: #181818;
+  color: #fff;
+  font-family: arial;
+  font-size:13px;
+  text-transform: none;
+}
+.musicbottom {
+  height:55px;
+  width:248px;
+  padding:3px;
+  color: #fff;
+  font-family:arial;
+  font-size:12px;
+  background:#222326;
+  text-align:center;
+  border-top:1px solid #888;
+  margin: 0;
+}
+
+
+</style>
+
+
+<script>
+
+$(document).ready(function() {
+
+    //
+
+//When you click on a link with class of poplight and the href starts with a # 
+
+$('a.poplight[href^=#]').click(function() {
+
+    var popID = $(this).attr('rel'); //Get Popup Name
+
+    var popURL = $(this).attr('href'); //Get Popup href to define size
+
+
+
+    //Pull Query & Variables from href URL
+
+    var query= popURL.split('?');
+
+    var dim= query[1].split('&');
+
+    var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+
+
+
+    //Fade in the Popup and add close button
+
+    $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend();
+
+
+    //Define margin for center alignment (vertical   horizontal) - we add 80px to the height/width to accomodate for the padding and border width defined in the css
+
+    var popMargTop = ($('#' + popID).height() + 80) / 2;
+
+    var popMargLeft = ($('#' + popID).width() + 80) / 2;
+
+
+
+    //Apply Margin to Popup
+
+    $('#' + popID).css({
+
+        'margin-top' : -popMargTop,
+
+        'margin-left' : -popMargLeft
+
+    });
+
+
+
+    //Fade in Background
+
+    $('body').append('<div id="fade"></div>'); //Add the fade layer to bottom of the body tag.
+
+    $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'}) is used to fix the IE Bug on fading transparencies 
+
+
+
+    return false;
+
+});
+
+
+
+//Close Popups and Fade Layer
+
+$('a.close, #fade').live('click', function() { //When clicking on the close or fade layer...
+
+    $('#fade , .popup_block').fadeOut(function() {
+
+        $('#fade, a.close').remove();  //fade them both out
+
+    });
+
+    return false;
+
+});
+
+
+
+
+
+});
+
+</script>
+
+</head>
+
+<body>
+<div id="container">
+  <div id="headline">
+    header
+  </div>
+  <div>
+  
+  <div id="navigation"><center>
+
+        <div class="block">
+          <div class="date">mon 00</div>
+          <div class="type">texts</div>
+          <div class="object"><A href="#?w=600" class="poplight" rel="01" title="texts"><img src="https://i.imgur.com/aDYRLH0.png" class="icon"></a></div>
+        </div>
+  
+  		<div class="block">
+          <div class="date">mon 00</div>
+          <div class="type">texts</div>
+          <div class="object"><A href="#?w=600" class="poplight" rel="02" title="texts"><img src="https://i.imgur.com/aDYRLH0.png" class="icon"></a></div>
+        </div>
+
+        <div class="block">
+          <div class="date">mon 00</div>
+          <div class="type">texts</div>
+          <div class="object"><A href="#?w=600" class="poplight" rel="03" title="texts"><img src="https://i.imgur.com/aDYRLH0.png" class="icon"></a></div>
+        </div>
+  
+  		<div class="block">
+          <div class="date">mon 00</div>
+          <div class="type">texts</div>
+          <div class="object"><A href="#?w=600" class="poplight" rel="04" title="texts"><img src="https://i.imgur.com/aDYRLH0.png" class="icon"></a></div>
+        </div>
+
+  
+  <br><br> <!-- START THE NEW ROW HERE -->
+
+
+
+ 
+  </div>
+  
+<!-- THIS IS THE START OF THE GISELLE TEXT MESSAGE  -->
+
+<div id="02" class="popup_block">
+  <div class="textheader">
+<img class="img-circle" src="https://i.imgur.com/N6l90PA.png" width="30">
+<div style="center; margin-top:2px;">Giselle</div>
+</div>
+      <div class="sentence"> 
+        <div class="talking from">
+          You will be at dinner tonight?  I am going to tell everyone.
+        </div>
+        <div class="talker">giselle</div>         
+      </div>
+
+      <div class="sentence">    
+        <div class="talking to">
+          i do not think that is a good idea.
+        </div>
+        <div class="talker self">guy</div>   
+      </div> 
+      <div class="sentence"> 
+        <div class="talking from">
+          I do not remember asking for your opinion.
+        </div>
+        <div class="talker">giselle</div>         
+      </div>
+
+      <div class="sentence">    
+        <div class="talking to">
+          is that not what you are doing?  my understanding was that you told me expressly so you could have my opinion.
+        </div>
+        <div class="talker self">guy</div>   
+      </div> 
+      <div class="sentence"> 
+        <div class="talking from">
+          I told you so you would have more than ample warning that it is far passed time for you to accept your responsibility.  There will be more now if I take some time away.
+        </div>
+        <div class="talker">giselle</div>         
+      </div>
+
+      <div class="sentence">    
+        <div class="talking to">
+          yes, i understand exactly what you have been saying.  i am here and i am doing what i am meant to.  i have also accepted that apparently it is my responsibility to tell you that the day before perhaps the biggest company meeting of the year is not the right time to tell everyone that you are pregnant.
+        </div>
+        <div class="talker self">guy</div>   
+      </div> 
+      
+      <div class="sentence">    
+        <div class="talking to">
+          have you thought about getting engaged?
+        </div>
+        <div class="talker self">guy</div>   
+      </div> 
+      <div class="sentence"> 
+        <div class="talking from">
+          Since when are you such a traditionalist?
+        </div>
+        <div class="talker">giselle</div>         
+      </div>
+
+      <div class="sentence">    
+        <div class="talking to">
+          i do not make the rules, giselle.  i am merely repeating a suggestion.
+        </div>
+        <div class="talker self">guy</div>   
+      </div> 
+      <div class="sentence"> 
+        <div class="talking from">
+          You told Maman?!
+        </div>
+        <div class="talker">giselle</div>         
+      </div>
+
+      <div class="sentence">    
+        <div class="talking to">
+          no, she told me she knows. you turned down champagne at dinner.
+        </div>
+        <div class="talker self">guy</div>   
+      </div> 
+      <div class="sentence">    
+        <div class="talking to">
+          she thinks that will make the news easier for father.
+        </div>
+        <div class="talker self">guy</div>   
+      </div> 
+       <div class="sentence"> 
+        <div class="talking from">
+          I cannot even speak to you right now.
+        </div>
+        <div class="talker">giselle</div>         
+      </div>
+      
+
+  </div>
+</div>
+
+<!-- THIS IS THE END OF THE FIRST TEXT MESSAGE -->
+
+<!-- THIS IS THE START OF THE GEMMA TEXT MESSAGE  -->
+
+<div id="03" class="popup_block">
+  <div class="textheader">
+<img class="img-circle" src="https://i.imgur.com/S3prIAJ.png" width="30">
+<div style="center; margin-top:2px;">Gemma</div>
+</div>
+
+      <div class="sentence">    
+        <div class="talking to">
+          gemma, i am going to be late for lunch.  i am so sorry.
+        </div>
+        <div class="talker self">guy</div>   
+      </div> 
+      <div class="sentence"> 
+        <div class="talking from">
+          don't be!  i know you're busy.
+        </div>
+        <div class="talker">gemma</div>         
+      </div>
+      <div class="sentence"> 
+        <div class="talking from">
+          want me to bring lunch to you?  or we can pick a different day?
+        </div>
+        <div class="talker">gemma</div>         
+      </div>
+      <div class="sentence">    
+        <div class="talking to">
+          no, i will be there.  i promised.  just give me another twenty minutes.  i want to see your exhibit.
+        </div>
+        <div class="talker self">guy</div>   
+      </div> 
+      <div class="sentence"> 
+        <div class="talking from">
+          i'll check back with you in a half hour 😜
+        </div>
+        <div class="talker">gemma</div>         
+      </div>
+      
+      
+
+  </div>
+</div>
+
+<!-- THIS IS THE END OF THE SECOND TEXT MESSAGE -->
+
+<!-- THIS IS THE START OF THE AMELIE TEXT MESSAGE  -->
+
+<div id="04" class="popup_block">
+  <div class="textheader">
+<img class="img-circle" src="https://i.imgur.com/eNZnfra.png" width="30">
+<div style="center; margin-top:2px;">Amelie</div>
+</div>
+      <div class="sentence"> 
+        <div class="talking from">
+          guuuuuuy
+        </div>
+        <div class="talker">amelie</div>         
+      </div>
+      <div class="sentence"> 
+        <div class="talking from">
+          i think i like your friends better than yoooou
+        </div>
+        <div class="talker">amelie</div>         
+      </div>
+
+      <div class="sentence">    
+        <div class="talking to">
+          well that is hurtful
+        </div>
+        <div class="talker self">guy</div>   
+      </div> 
+      <div class="sentence">    
+        <div class="talking to">
+          i am glad you are having a good time
+        </div>
+        <div class="talker self">guy</div>   
+      </div> 
+      
+      <div class="sentence"> 
+        <div class="talking from">
+          YOU KNOW I DON'T MEAN TI
+        </div>
+        <div class="talker">amelie</div>         
+      </div>
+      <div class="sentence"> 
+        <div class="talking from">
+          but why didn't you come
+        </div>
+        <div class="talker">amelie</div>         
+      </div>
+      <div class="sentence"> 
+        <div class="talking from">
+          you should be here!!
+        </div>
+        <div class="talker">amelie</div>         
+      </div>
+      <div class="sentence">    
+        <div class="talking to">
+          i am trying to finish a bit of work or i would have come
+        </div>
+        <div class="talker self">guy</div>   
+      </div>
+      <div class="sentence"> 
+        <div class="talking from">
+          you can come now
+        </div>
+        <div class="talker">amelie</div>         
+      </div>
+      <div class="sentence">    
+        <div class="talking to">
+          but i am not done yet
+        </div>
+        <div class="talker self">guy</div>   
+      </div>
+      <div class="sentence"> 
+        <div class="talking from">
+          who cares you are missing everything!
+        </div>
+        <div class="talker">amelie</div>         
+      </div>
+      <div class="sentence"> 
+        <div class="talking from">
+          and if you don't come how am i going to get home?
+        </div>
+        <div class="talker">amelie</div>         
+      </div>
+      <div class="sentence">    
+        <div class="talking to">
+          how did you get there?
+        </div>
+        <div class="talker self">guy</div>   
+      </div>
+      <div class="sentence"> 
+        <div class="talking from">
+          we all came together but i left with someone else and now i'm not sure where the car is
+        </div>
+        <div class="talker">amelie</div>         
+      </div>
+      <div class="sentence">    
+        <div class="talking to">
+          where are you?
+        </div>
+        <div class="talker self">guy</div>   
+      </div>
+      <div class="sentence"> 
+        <div class="talking from">
+          i'm not really sure
+        </div>
+        <div class="talker">amelie</div>         
+      </div>
+      <div class="sentence">    
+        <div class="talking to">
+          stay where you are.  i will come get you.
+        </div>
+        <div class="talker self">guy</div>   
+      </div>
+      <div class="sentence"> 
+        <div class="talking from">
+          will you come now?  iw ant to go home.
+        </div>
+        <div class="talker">amelie</div>         
+      </div>
+      <div class="sentence">    
+        <div class="talking to">
+          yes, now.
+        </div>
+        <div class="talker self">guy</div>   
+      </div>
+      <div class="sentence"> 
+        <div class="talking from">
+          you're the best and i love love love you
+        </div>
+        <div class="talker">amelie</div>         
+      </div>
+      
+      
+
+  </div>
+</div>
+
+<!-- THIS IS THE END OF THE THIRD TEXT MESSAGE -->
+
+<!-- THIS IS THE START OF THE CAMI TEXT MESSAGE  -->
+
+<div id="01" class="popup_block">
+  <div class="textheader">
+<img class="img-circle" src="https://i.imgur.com/egunErS.png" width="30">
+<div style="center; margin-top:2px;">Camille</div>
+</div>
+      <div class="sentence"> 
+        <div class="talking from">
+          i got your flowers!!
+        </div>
+        <div class="talker">Camille</div>         
+      </div>
+      
+      <div class="sentence"> 
+        <div class="talking from">
+          i haven't even walked yet!
+        </div>
+        <div class="talker">Camille</div>         
+      </div>
+
+      <div class="sentence">    
+        <div class="talking to">
+          they are break a leg flowers for luck, though you do not need it.
+        </div>
+        <div class="talker self">Guy</div>   
+      </div> 
+      
+      <div class="sentence"> 
+        <div class="talking to">
+          you are settled in your hotel?
+        </div>
+        <div class="talker self">Guy</div>         
+      </div>
+      
+      <div class="sentence"> 
+        <div class="talking from">
+          yeah i'm good.
+        </div>
+        <div class="talker">Camille</div>         
+      </div>
+      <div class="sentence"> 
+        <div class="talking from">
+          i have to run to a fitting but PROMISE YOU'LL BE AT THE SHOW??
+        </div>
+        <div class="talker">Camille</div>         
+      </div>
+      <div class="sentence"> 
+        <div class="talking to">
+          i have already promised i will be at the show.  there is no where else i would be.
+        </div>
+        <div class="talker self">Guy</div>         
+      </div>
+      <div class="sentence"> 
+        <div class="talking from">
+          good then you can take me out to celebrate!
+        </div>
+        <div class="talker">Camille</div>         
+      </div>
+      <div class="sentence"> 
+        <div class="talking to">
+          of course i will.
+        </div>
+        <div class="talker self">Guy</div>         
+      </div>
+
+  </div>
+</div>
+
+<!-- THIS IS THE END OF THE FOURTH TEXT MESSAGE -->
+
+
+</body>
+</html>
